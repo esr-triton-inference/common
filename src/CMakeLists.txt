@@ -59,14 +59,13 @@ add_library(
 add_library(
   TritonCommon::triton-common-logging ALIAS triton-common-logging
 )
-
 target_include_directories(
   triton-common-logging
   PUBLIC
     $<INSTALL_INTERFACE:include>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
   PRIVATE
-    ${RAPIDJSON_INCLUDE_DIRS}
+    ${RapidJSON_INCLUDE_DIRS}/..
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
